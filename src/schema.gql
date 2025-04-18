@@ -1,0 +1,89 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type AuthResponse {
+  accessToken: String!
+}
+
+type UserProfileModel {
+  id: ID!
+  bio: String
+  avatarUrl: String
+}
+
+type UserModel {
+  id: ID!
+  username: String!
+  email: String!
+  profile: UserProfileModel
+}
+
+type ChangePasswordResponse {
+  success: Boolean!
+  message: String!
+}
+
+type TagModel {
+  id: ID!
+  name: String!
+}
+
+type PostModel {
+  id: ID!
+  title: String!
+  content: String!
+  tags: [TagModel!]
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  getMyProfile: UserModel!
+  getMyPosts: [PostModel!]!
+  allTags(order: String = "asc"): [TagModel!]!
+}
+
+type Mutation {
+  login(data: LoginInput!): AuthResponse!
+  register(data: RegisterInput!): UserModel!
+  updateProfile(bio: String!, avatarUrl: String!): UserProfileModel!
+  deleteUser: UserModel!
+  changePassword(oldPassword: String!, newPassword: String!): ChangePasswordResponse!
+  createPost(data: CreatePostInput!): PostModel!
+  updatePost(data: UpdatePostInput!): PostModel!
+  deletePost(postId: String!): PostModel
+  createTag(data: CreateTagInput!): TagModel!
+}
+
+input LoginInput {
+  username: String!
+  password: String!
+}
+
+input RegisterInput {
+  username: String!
+  email: String!
+  password: String!
+}
+
+input CreatePostInput {
+  title: String!
+  content: String!
+  tagIds: [String!]!
+}
+
+input UpdatePostInput {
+  id: ID!
+  title: String
+  content: String
+}
+
+input CreateTagInput {
+  name: String!
+}
