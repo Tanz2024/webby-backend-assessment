@@ -1,6 +1,6 @@
 # NestJS Blog Management API
 
-A clean, production-ready GraphQL API built with **NestJS**, **Prisma**, and **PostgreSQL**. This project showcases a real-world backend system with modular architecture, authentication, post and tag management, profile handling, and CQRS-based logic. It was developed as part of a backend developer technical assessment.
+A clean, production-ready GraphQL API built with **NestJS**, **Prisma**, and **PostgreSQL**. This project is a practical backend system built using modular design principles. It includes user authentication, post and tag operations, profile management, and follows the CQRS pattern for clean separation of logic. It was developed as part of a technical assessment for a backend developer role.
 
 ---
 
@@ -14,7 +14,7 @@ A clean, production-ready GraphQL API built with **NestJS**, **Prisma**, and **P
   - [Mutations](#mutations)
   - [Queries](#queries)
   - [Validation Rules](#validation-rules)
-- [6. Design Considerations](#6-design-considerations)
+- [6.Known Issues and Challenges](#6-Known-Issues-and-Challenges)
 - [7. Database Schema](#7-database-schema)
 - [8. Postman/Insomnia Export](#8-postmaninsomnia-export)
 - [9. License](#9-license)
@@ -86,7 +86,7 @@ This is a backend application built for managing users, blog posts, and tags thr
 - Start the development servernpm run start:dev
 
 - Open GraphQL Playground: Visit: http://localhost:3000/graphql
-- 
+  
 ## 5. Graphql-api-usage
 
 ### Mutations
@@ -137,17 +137,22 @@ This is a backend application built for managing users, blog posts, and tags thr
 
 - Profile Fields: Bio and avatar URL must be properly formatted strings
 
-## 6.  Design Considerations
+## 6.  Known Issues and Challenges
 
-- Custom error handling via GraphQL extensions
+- Duplicate user errors:
+  Handled Prisma errors to clearly show if a username or email is already taken.
 
-- Strict ownership enforcement in resolvers and services
+- Post ownership checks:
+  Ensured only the post creator can edit or delete their posts using service-level checks and guards.
 
-- CQRS separation via NestJS @nestjs/cqrs
+- Input validation:
+  Added class-validator rules to catch things like short passwords or missing fields.
 
-- Prisma validation through schema typing
+- Safe error responses:
+  Customized GraphQL errors to hide internal details and return cleaner messages.
 
-- Schema-first development with src/schema.gql generated automatically
+- Schema consistency:
+  Kept GraphQL schema and database models in sync by auto-generating schema.gql.
 
 ## 7. Database Schema
 
@@ -171,7 +176,7 @@ A Postman or Insomnia collection is optional but encouraged. You may request an 
 
 ## 9.  License
 
-This project is open-source and licensed under the MIT License.
+This project is open-source and licensed under the [MIT License](./LICENSE).
 
 ## 10.  Contact
 
