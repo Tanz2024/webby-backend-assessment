@@ -177,11 +177,21 @@ This is a backend application built for managing users, blog posts, and tags thr
 
 - Ownership Check: Only post creators can modify or delete their content
 
+- Post updates require ownership and a valid auth token.
+  
+![image](https://github.com/user-attachments/assets/f15ae13f-48a5-4726-ba01-094e8c42a748)
+
+- Post deletion requires ownership and a valid auth token.
+
+![image](https://github.com/user-attachments/assets/8e8c016f-62f8-4198-be83-bbddf6dbe7f1)
+
 - Normalized Tags: Tag names are saved in lowercase, must be unique
 
 ![image](https://github.com/user-attachments/assets/aa3771a4-5510-40b1-b644-1a35d5da08c5) 
 
 - Profile Fields: Bio and avatar URL must be properly formatted strings
+
+![image](https://github.com/user-attachments/assets/31186acf-a895-4710-af66-c63fd2c6c78b)
 
 ## 6. Known Challenges and Fixes
 
