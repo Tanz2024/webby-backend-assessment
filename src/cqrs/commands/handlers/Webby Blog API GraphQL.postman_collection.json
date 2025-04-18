@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "0ced7278-1291-425c-a3e0-d3b8c0d47f6f",
+		"name": "Webby Blog API GraphQL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32571407"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/graphql ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"mutation { register(data: { username: \\\"Webbyuser\\\", email: \\\"webby@dev.com\\\", password: \\\"Webby1234@\\\" }) { id username email } }\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/graphql",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"mutation { login(data: { username: \\\"Webbyuser\\\", password: \\\"Webby1234@\\\" }) { accessToken } }\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/graphql?Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MTY5ZTYzNy05ZWIyLTQzN2ItYjU4Yi01ZGUxOGQ1OTFhN2MiLCJ1c2VybmFtZSI6IldlYmJ5dXNlciIsImlhdCI6MTc0NDk1OTY0NCwiZXhwIjoxNzQ1NTY0NDQ0fQ.B1KZKOKnDLbfsr2C04443riUTHb6",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"mutation { createTag(data: { name: \\\"webbynow\\\" }) { id name } }\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/graphql?Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MTY5ZTYzNy05ZWIyLTQzN2ItYjU4Yi01ZGUxOGQ1OTFhN2MiLCJ1c2VybmFtZSI6IldlYmJ5dXNlciIsImlhdCI6MTc0NDk1OTY0NCwiZXhwIjoxNzQ1NTY0NDQ0fQ.B1KZKOKnDLbfsr2C04443riUTHb66gXXZvGH_8GEnsQ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"graphql"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MTY5ZTYzNy05ZWIyLTQzN2ItYjU4Yi01ZGUxOGQ1OTFhN2MiLCJ1c2VybmFtZSI6IldlYmJ5dXNlciIsImlhdCI6MTc0NDk1OTY0NCwiZXhwIjoxNzQ1NTY0NDQ0fQ.B1KZKOKnDLbfsr2C04443riUTHb66gXXZvGH_8GEnsQ"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/graphql",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MTY5ZTYzNy05ZWIyLTQzN2ItYjU4Yi01ZGUxOGQ1OTFhN2MiLCJ1c2VybmFtZSI6IldlYmJ5dXNlciIsImlhdCI6MTc0NDk1OTY0NCwiZXhwIjoxNzQ1NTY0NDQ0fQ.B1KZKOKnDLbfsr2C04443riUTHb66gXXZvGH_8GEnsQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"mutation { createPost(data: { title: \\\"Webby Tips\\\", content: \\\"Welcome to Webby!\\\", tagIds: [\\\"d52648a5-6132-4867-b3a3-c33f54c8dcb2\\\"] }) { id title content tags { name } } }\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/graphql",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MTY5ZTYzNy05ZWIyLTQzN2ItYjU4Yi01ZGUxOGQ1OTFhN2MiLCJ1c2VybmFtZSI6IldlYmJ5dXNlciIsImlhdCI6MTc0NDk1OTY0NCwiZXhwIjoxNzQ1NTY0NDQ0fQ.B1KZKOKnDLbfsr2C04443riUTHb66gXXZvGH_8GEnsQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"query { getMyPosts { id title content tags { name } } }\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/graphql",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MTY5ZTYzNy05ZWIyLTQzN2ItYjU4Yi01ZGUxOGQ1OTFhN2MiLCJ1c2VybmFtZSI6IldlYmJ5dXNlciIsImlhdCI6MTc0NDk1OTY0NCwiZXhwIjoxNzQ1NTY0NDQ0fQ.B1KZKOKnDLbfsr2C04443riUTHb66gXXZvGH_8GEnsQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"mutation { updateProfile(data: { bio: \\\"I build with Webby.\\\", avatarUrl: \\\"https://example.com/avatar.png\\\" }) { id bio avatarUrl } }\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
