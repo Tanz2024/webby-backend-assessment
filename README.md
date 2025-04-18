@@ -78,14 +78,14 @@ This is a backend application built for managing users, blog posts, and tags thr
 
 - Create a .env file in the root directory and configure:
 
-- DATABASE_URL=postgresql://<username>:<password>@localhost:5432/<your_database>
+- DATABASE_URL = postgresql://<username>:<password>@localhost:5432/<your_database>
 - JWT_SECRET=your_jwt_secret_here
 
-- Run database migrationsnpx prisma migrate dev
+- Run database migrations = npx prisma migrate dev
 
-- Start the development servernpm run start:dev
+- Start the development server = npm run start:dev
 
-- Open GraphQL Playground: Visit: http://localhost:3000/graphql
+- Open GraphQL Playground = Visit: http://localhost:3000/graphql
   
 ## 5. Graphql-api-usage
 
