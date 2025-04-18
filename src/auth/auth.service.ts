@@ -17,7 +17,7 @@ export class AuthService {
   async validateUser(username: string, password: string): Promise<User> {
     const user = await this.prisma.user.findUnique({ where: { username } });
 
-    // ✅ Clear and unified error response
+   
     if (!user) {
       throw new UnauthorizedException('Invalid username or password');
     }
