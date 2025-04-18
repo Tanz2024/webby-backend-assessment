@@ -12,7 +12,7 @@ export class PostModel {
   @Field()
   content: string;
 
-  @Field(() => [TagModel], { nullable: true }) // ✅ fixed: make tags optional
+  @Field(() => [TagModel], { nullable: true }) 
   tags?: TagModel[] | null;
 
   @Field()
