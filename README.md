@@ -70,7 +70,7 @@ This is a backend application built for managing users, blog posts, and tags thr
 
 ## 4. Setup Instructions
 
-- Clone the repositorygit clone https://github.com/Tanz2024/webby-backend-assessment.git
+- Clone the repository git clone https://github.com/Tanz2024/webby-backend-assessment.git
 
 - Navigate into the project directorycd webby-backend-assessment
 
@@ -79,6 +79,7 @@ This is a backend application built for managing users, blog posts, and tags thr
 - Create a .env file in the root directory and configure:
 
 - DATABASE_URL = postgresql://<username>:<password>@localhost:5432/<your_database>
+
 - JWT_SECRET=your_jwt_secret_here
 
 - Run database migrations = npx prisma migrate dev
