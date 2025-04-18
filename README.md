@@ -109,15 +109,19 @@ This is a backend application built for managing users, blog posts, and tags thr
 
 - deleteUser() – Permanently remove own account
 
+![image](https://github.com/user-attachments/assets/186c257e-33db-4737-bb2a-8d5bdefce8a9)
+
 - createPost(data: CreatePostInput) – Publish a new blog post - Tag ID compulsory
 
- ![image](https://github.com/user-attachments/assets/5c39d3c8-7e45-4af7-bb27-05685af44dae)
+![image](https://github.com/user-attachments/assets/5c39d3c8-7e45-4af7-bb27-05685af44dae)
 
 - updatePost(id: String, data: UpdatePostInput) – Edit an existing post - Post ID compulsory
 
 ![image](https://github.com/user-attachments/assets/510513d3-3768-41b8-af36-90c012bca22b)
 
 - deletePost(id: String) – Remove an authored post
+
+![image](https://github.com/user-attachments/assets/4f08b834-172e-45ae-9d50-7c4944cf39c0)
 
 - createTag(data: CreateTagInput) – Create a new tag entry
 
@@ -131,9 +135,23 @@ This is a backend application built for managing users, blog posts, and tags thr
 
 - getMyPosts() – Retrieve all posts authored by the current user
 
+![image](https://github.com/user-attachments/assets/2b190945-92a5-4573-adb8-eb50ba10d0d6)
+
 - allPosts() – View all posts (public)
 
+![image](https://github.com/user-attachments/assets/39046288-8abf-44b2-a3e2-c565825bd027)
+
 - allTags(order: asc | desc) – Fetch tags with optional sort order
+  
+  - ASC ORDER
+    
+![image](https://github.com/user-attachments/assets/c464f0f1-dd6c-4182-8103-2dc9864e3c0e)
+
+  - DESC ORDER
+
+![image](https://github.com/user-attachments/assets/da796745-390b-46f3-bffe-87bf5e355279)
+
+
 
 ### Validation Rules
 
