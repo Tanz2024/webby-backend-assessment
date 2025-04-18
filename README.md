@@ -157,17 +157,29 @@ This is a backend application built for managing users, blog posts, and tags thr
 
 - Email Format: Must use a valid format
 
+ ![image](https://github.com/user-attachments/assets/ceb05d07-14a7-4bcb-927b-5845b00483db)
+
 - Unique Username: Username cannot duplicate existing users
+
+ ![image](https://github.com/user-attachments/assets/ad583e05-7095-4536-a6e0-eab9c5323b99)
 
 - Password Strength: Minimum 6 characters with basic complexity
 
+ ![image](https://github.com/user-attachments/assets/f9ef0b3c-0793-4f5f-8b98-05adaeb1ad5b)
+
 - Post Title: Must be between 5–100 characters
 
-- Auth Required: Sensitive actions like edit, delete, and post require valid JWT
+![image](https://github.com/user-attachments/assets/ce432f66-fe30-4b7c-803e-56d63ca75202)
+
+- Auth Required: Sensitive actions like edit, delete, and post require valid JWT (TOKEN NEEDED)
+
+![image](https://github.com/user-attachments/assets/a5b15606-fb74-4622-9c0c-0d0a1b0eb374)
 
 - Ownership Check: Only post creators can modify or delete their content
 
 - Normalized Tags: Tag names are saved in lowercase, must be unique
+
+![image](https://github.com/user-attachments/assets/149a235c-5116-46b3-9970-ace287be14fd)
 
 - Profile Fields: Bio and avatar URL must be properly formatted strings
 
