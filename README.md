@@ -93,25 +93,41 @@ This is a backend application built for managing users, blog posts, and tags thr
 
 - register(data: RegisterInput) – Register a new user account
 
+![image](https://github.com/user-attachments/assets/ed1baf4a-cf67-419c-b0e4-f94e3c8fc55f)
+
 - login(data: LoginInput) – Log in with credentials
 
-- updateProfile(bio: String, avatarUrl: String) – Edit user bio and avatar
+![image](https://github.com/user-attachments/assets/4104ec18-6be4-4076-aabb-15eba90c4d80)
+
+- updateProfile(bio: String, avatarUrl: String) – Edit user bio and avatar -Authorization token needed !
+
+![image](https://github.com/user-attachments/assets/66e93fc0-11c9-423d-bd35-4a1370bdcecf)
 
 - changePassword(oldPassword: String, newPassword: String) – Change current password
 
+![image](https://github.com/user-attachments/assets/73a2e89f-1513-45ba-8872-2924574bc4b3)
+
 - deleteUser() – Permanently remove own account
 
-- createPost(data: CreatePostInput) – Publish a new blog post
+- createPost(data: CreatePostInput) – Publish a new blog post - Tag ID compulsory
 
-- updatePost(id: String, data: UpdatePostInput) – Edit an existing post
+ ![image](https://github.com/user-attachments/assets/5c39d3c8-7e45-4af7-bb27-05685af44dae)
+
+- updatePost(id: String, data: UpdatePostInput) – Edit an existing post - Post ID compulsory
+
+![image](https://github.com/user-attachments/assets/510513d3-3768-41b8-af36-90c012bca22b)
 
 - deletePost(id: String) – Remove an authored post
 
 - createTag(data: CreateTagInput) – Create a new tag entry
 
+![image](https://github.com/user-attachments/assets/93b45b8a-eb14-4223-8cff-cf5c88222065)
+
 ### Queries
 
 - getMyProfile() – Fetch authenticated user's profile
+
+![image](https://github.com/user-attachments/assets/97f9ff06-f865-451a-88b5-84838f6aa9a8)
 
 - getMyPosts() – Retrieve all posts authored by the current user
 
@@ -137,7 +153,7 @@ This is a backend application built for managing users, blog posts, and tags thr
 
 - Profile Fields: Bio and avatar URL must be properly formatted strings
 
-## 6. Known Issues and Challenges
+## 6. Known Challenges and Fixes
 
 - Duplicate user errors:
   Handled Prisma errors to clearly show if a username or email is already taken.
