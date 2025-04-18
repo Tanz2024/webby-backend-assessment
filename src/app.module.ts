@@ -21,7 +21,7 @@ import { CommandBusModule } from './cqrs/command-bus.module';
         const originalMessage =
           error?.extensions?.originalError?.message || error.message;
 
-        // ✅ Custom error mapping for known errors
+        //  Custom mapping to find errors
         const errorMap: Record<string, { message: string; code: string }> = {
           'Tag name must be unique': { message: 'Tag already exists', code: 'CONFLICT' },
           'Tag already exists': { message: 'Tag already exists', code: 'CONFLICT' },
@@ -44,7 +44,7 @@ import { CommandBusModule } from './cqrs/command-bus.module';
           };
         }
 
-        // ✅ Handle class-validator / input validation errors
+     // Handle class-validator / input validation errors
         if (error.extensions?.code === 'BAD_USER_INPUT') {
           return {
             message: 'Invalid input',
@@ -52,7 +52,6 @@ import { CommandBusModule } from './cqrs/command-bus.module';
           };
         }
 
-        // ❌ Fallback for unhandled or internal errors
         return {
           message: error.message,
           path: error.path,
