@@ -107,7 +107,7 @@ This is a backend application built for managing users, blog posts, and tags thr
 
 ![image](https://github.com/user-attachments/assets/73a2e89f-1513-45ba-8872-2924574bc4b3)
 
-- deleteUser() – Permanently remove own account
+- deleteUser() – Permanently remove own account(Authorization token needed for their own account)
 
 ![image](https://github.com/user-attachments/assets/186c257e-33db-4737-bb2a-8d5bdefce8a9)
 
