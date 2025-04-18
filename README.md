@@ -226,6 +226,8 @@ The application uses the following models:
 
 - Schema located in: prisma/schema.prisma.
 
+You can view the database schema in [prisma/schema.prisma](./prisma/schema.prisma).
+
 ## 8. Postman/Insomnia Export
 
 ## Postman Collection
