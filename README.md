@@ -1,4 +1,4 @@
-# NestJS Blog Management API
+![image](https://github.com/user-attachments/assets/4179ce57-08ce-4cfa-96b0-678fccee5777)# NestJS Blog Management API
 
 A clean, production-ready GraphQL API built with **NestJS**, **Prisma**, and **PostgreSQL**. This project is a practical backend system built using modular design principles. It includes user authentication, post and tag operations, profile management, and follows the CQRS pattern for clean separation of logic. It was developed as part of a technical assessment for a backend developer role.
 
@@ -179,7 +179,7 @@ This is a backend application built for managing users, blog posts, and tags thr
 
 - Normalized Tags: Tag names are saved in lowercase, must be unique
 
-![image](https://github.com/user-attachments/assets/149a235c-5116-46b3-9970-ace287be14fd)
+![image](https://github.com/user-attachments/assets/aa3771a4-5510-40b1-b644-1a35d5da08c5) 
 
 - Profile Fields: Bio and avatar URL must be properly formatted strings
 
