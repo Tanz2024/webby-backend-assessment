@@ -33,7 +33,7 @@ model Post {
   author    User        @relation(fields: [authorId], references: [id])
   authorId  String
   postTags  PostTag[]
-  tags      Tag[]       @relation("PostTags") // ✅ valid for v6
+  tags      Tag[]       @relation("PostTags")
   createdAt DateTime    @default(now())
   updatedAt DateTime    @updatedAt
 }
@@ -42,7 +42,7 @@ model Tag {
   id        String     @id @default(uuid())
   name      String     @unique
   postTags  PostTag[]
-  posts     Post[]     @relation("PostTags") // ✅ valid for v6
+  posts     Post[]     @relation("PostTags") 
 }
 
 
