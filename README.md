@@ -230,8 +230,7 @@ The application uses the following models:
 
 ## Postman Collection
 
-You can test the API locally using this [Postman Collection](./Webby%20Blog%20API%20GraphQL.postman_collection.json).
-
+You can test the API locally using this [Postman Collection](./postman/Webby%20Blog%20API%20GraphQL.postman_collection.json).
 
 It includes:
 
