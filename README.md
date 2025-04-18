@@ -14,7 +14,7 @@ A clean, production-ready GraphQL API built with **NestJS**, **Prisma**, and **P
   - [Mutations](#mutations)
   - [Queries](#queries)
   - [Validation Rules](#validation-rules)
-- [6.Known Issues and Challenges](#6-Known-Issues-and-Challenges)
+- [6. Known Issues and Challenges](#6-known-issues-and-challenges)
 - [7. Database Schema](#7-database-schema)
 - [8. Postman/Insomnia Export](#8-postmaninsomnia-export)
 - [9. License](#9-license)
