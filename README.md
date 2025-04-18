@@ -137,7 +137,7 @@ This is a backend application built for managing users, blog posts, and tags thr
 
 - Profile Fields: Bio and avatar URL must be properly formatted strings
 
-## 6.  Known Issues and Challenges
+### 6.  Known Issues and Challenges
 
 - Duplicate user errors:
   Handled Prisma errors to clearly show if a username or email is already taken.
