@@ -230,9 +230,8 @@ The application uses the following models:
  
 - Below ER DIAGRAM
   
-  ![image](https://github.com/user-attachments/assets/c6e5dadd-4028-4f59-9fd4-276102c73032)
-
-
+  ![image](https://github.com/user-attachments/assets/5aa330c4-55c6-47dd-bc50-8d34030bae3a)
+  
 ## 8. Postman
 
 ## Postman Collection
