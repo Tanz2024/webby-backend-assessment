@@ -1,6 +1,6 @@
 # NestJS Blog Management API
 
-A clean, production-ready GraphQL API built with **NestJS**, **Prisma**, and **PostgreSQL**. This project is a practical backend system built using modular design principles. It includes user authentication, post and tag operations, profile management, and follows the CQRS pattern for clean separation of logic. It was developed as part of a technical assessment for a backend developer role.
+This project is a production-ready GraphQL API built with NestJS, Prisma, and PostgreSQL, following modular design principles. It includes user authentication, post and tag management, and profile management, all while using the CQRS pattern for clear separation of logic. Developed as part of a backend developer assessment, it provides a clean and scalable backend solution.
 
 ---
 
