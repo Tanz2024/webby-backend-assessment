@@ -228,7 +228,22 @@ The application uses the following models:
 
 ## 8. Postman/Insomnia Export
 
-A Postman or Insomnia collection is optional but encouraged. You may request an export file for local API testing.
+## Postman Collection
+
+You can test the API locally using this [Postman Collection](./postman-collection.json).  
+
+It includes:
+
+- Register
+- Login
+- Create Tag
+- Create Post
+- Get My Posts
+- Update Profile
+- Delete User
+
+> To use, import the file into Postman → update the GraphQL server URL and auth token.
+
 
 ## 9.  License
 
