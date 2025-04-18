@@ -14,7 +14,7 @@ A clean, production-ready GraphQL API built with **NestJS**, **Prisma**, and **P
   - [Mutations](#mutations)
   - [Queries](#queries)
   - [Validation Rules](#validation-rules)
-- [6. Known Issues and Challenges](#6-known-issues-and-challenges)
+- [6. Known Challenges and Fixes](#6-known-challenges-and-fixes)
 - [7. Database Schema](#7-database-schema)
 - [8. Postman/Insomnia Export](#8-postmaninsomnia-export)
 - [9. License](#9-license)
@@ -137,7 +137,7 @@ This is a backend application built for managing users, blog posts, and tags thr
 
 - Profile Fields: Bio and avatar URL must be properly formatted strings
 
-### 6.  Known Issues and Challenges
+## 6. Known Issues and Challenges
 
 - Duplicate user errors:
   Handled Prisma errors to clearly show if a username or email is already taken.
