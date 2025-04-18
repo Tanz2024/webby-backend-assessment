@@ -46,13 +46,14 @@ scalar DateTime
 type Query {
   getMyProfile: UserModel!
   getMyPosts: [PostModel!]!
+  allPosts: [PostModel!]!
   allTags(order: String = "asc"): [TagModel!]!
 }
 
 type Mutation {
   login(data: LoginInput!): AuthResponse!
   register(data: RegisterInput!): UserModel!
-  updateProfile(bio: String!, avatarUrl: String!): UserProfileModel!
+  updateProfile(data: UpdateProfileInput!): UserProfileModel!
   deleteUser: UserModel!
   changePassword(oldPassword: String!, newPassword: String!): ChangePasswordResponse!
   createPost(data: CreatePostInput!): PostModel!
@@ -70,6 +71,11 @@ input RegisterInput {
   username: String!
   email: String!
   password: String!
+}
+
+input UpdateProfileInput {
+  bio: String
+  avatarUrl: String
 }
 
 input CreatePostInput {

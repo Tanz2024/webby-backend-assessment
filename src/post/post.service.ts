@@ -9,23 +9,23 @@ export class PostService {
 
   async createPost(userId: string, input: CreatePostInput) {
     const { title, content, tagIds } = input;
-  
+
     const user = await this.prisma.user.findUnique({ where: { id: userId } });
     if (!user) throw new NotFoundException('User not found');
-  
-    // ✅ Check if all tagIds exist
+
+    // Validate tagIds
     const existingTags = await this.prisma.tag.findMany({
       where: { id: { in: tagIds } },
       select: { id: true },
     });
-  
+
     const foundIds = existingTags.map(t => t.id);
     const missingTagIds = tagIds.filter(id => !foundIds.includes(id));
-  
+
     if (missingTagIds.length > 0) {
       throw new NotFoundException(`Tag not found: ${missingTagIds.join(', ')}`);
     }
-  
+
     return this.prisma.post.create({
       data: {
         title,
@@ -42,7 +42,6 @@ export class PostService {
       },
     });
   }
-  
 
   async updatePost(userId: string, input: UpdatePostInput) {
     const post = await this.prisma.post.findUnique({
@@ -87,6 +86,18 @@ export class PostService {
   async getMyPosts(userId: string) {
     return this.prisma.post.findMany({
       where: { authorId: userId },
+      include: {
+        postTags: {
+          include: { tag: true },
+        },
+      },
+    });
+  }
+
+  // ✅ New: Get all public posts (no auth required)
+  async getAllPosts() {
+    return this.prisma.post.findMany({
+      orderBy: { createdAt: 'desc' },
       include: {
         postTags: {
           include: { tag: true },

@@ -1,13 +1,11 @@
 import { Resolver, Mutation, Args, Query } from '@nestjs/graphql';
 import { UseGuards } from '@nestjs/common';
-
+import { UpdateProfileInput } from './update-profile.input';
 import { UserService } from './user.service';
 import { RegisterInput } from './register.input';
 import { UserModel } from './user.model';
 import { UserProfileModel } from './user-profile.model';
 import { ChangePasswordResponse } from './change-password-response.model';
-
-
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { CurrentUser } from '../auth/current-user.decorator';
 
@@ -15,9 +13,7 @@ import { CurrentUser } from '../auth/current-user.decorator';
 export class UserResolver {
   constructor(private readonly userService: UserService) {}
 
-  /**
-   * Register a new user
-   */
+
   @Mutation(() => UserModel)
   async register(
     @Args('data') data: RegisterInput,
@@ -25,9 +21,6 @@ export class UserResolver {
     return this.userService.createUser(data);
   }
 
-  /**
-   * Get currently authenticated user's profile
-   */
   @Query(() => UserModel)
   @UseGuards(JwtAuthGuard)
   async getMyProfile(
@@ -36,22 +29,17 @@ export class UserResolver {
     return this.userService.findById(user.id);
   }
 
-  /**
-   * Update user's bio and avatar
-   */
   @Mutation(() => UserProfileModel)
   @UseGuards(JwtAuthGuard)
   async updateProfile(
     @CurrentUser() user: { id: string },
-    @Args('bio') bio: string,
-    @Args('avatarUrl') avatarUrl: string,
+    @Args('data') data: UpdateProfileInput,
   ): Promise<UserProfileModel> {
+    const { bio, avatarUrl } = data;
     return this.userService.updateProfile(user.id, bio, avatarUrl);
   }
+  
 
-  /**
-   * Delete the current user and related profile
-   */
   @Mutation(() => UserModel)
   @UseGuards(JwtAuthGuard)
   async deleteUser(
@@ -60,9 +48,7 @@ export class UserResolver {
     return this.userService.deleteUser(user.id);
   }
 
-  /**
-   * Change password for current user
-   */
+ 
   @Mutation(() => ChangePasswordResponse)
   @UseGuards(JwtAuthGuard)
   async changePassword(
