@@ -248,10 +248,10 @@ It includes:
 - Update Profile
 - Delete User
   
-## 9.  License
+## 9. License
 
 This project is open-source and licensed under the [MIT License](./LICENSE).
 
-## 10.  Contact
+## 10. Contact
 
 If you have any questions, please raise an issue or contact us at tanzimbinzahir2019@gmail.com.
