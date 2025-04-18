@@ -16,7 +16,7 @@ A clean, production-ready GraphQL API built with **NestJS**, **Prisma**, and **P
   - [Validation Rules](#validation-rules)
 - [6. Known Challenges and Fixes](#6-known-challenges-and-fixes)
 - [7. Database Schema](#7-database-schema)
-- [8. Postman/Insomnia Export](#8-postmaninsomnia-export)
+- [8. Postman](#8-postman)
 - [9. License](#9-license)
 - [10. Contact](#10-contact)
 
@@ -225,10 +225,15 @@ The application uses the following models:
 - PostTag: Join table for Post and Tag
 
 - Schema located in: prisma/schema.prisma.
+  
+- You can view the database schema in [prisma/schema.prisma](./prisma/schema.prisma).
+ 
+- Below ER DIAGRAM
+  
+  ![image](https://github.com/user-attachments/assets/c6e5dadd-4028-4f59-9fd4-276102c73032)
 
-You can view the database schema in [prisma/schema.prisma](./prisma/schema.prisma).
 
-## 8. Postman/Insomnia Export
+## 8. Postman
 
 ## Postman Collection
 
@@ -243,10 +248,7 @@ It includes:
 - Get My Posts
 - Update Profile
 - Delete User
-
-> To use, import the file into Postman → update the GraphQL server URL and auth token.
-
-
+  
 ## 9.  License
 
 This project is open-source and licensed under the [MIT License](./LICENSE).
