@@ -94,7 +94,7 @@ export class PostService {
     });
   }
 
-  // ✅ New: Get all public posts (no auth required)
+  //  Get all public posts (no auth required)
   async getAllPosts() {
     return this.prisma.post.findMany({
       orderBy: { createdAt: 'desc' },
