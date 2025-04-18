@@ -74,7 +74,7 @@ This is a backend application built for managing users, blog posts, and tags thr
 
 - Navigate into the project directorycd webby-backend-assessment
 
-- Install dependencies: npm install
+- Install dependencies = npm install
 
 - Create a .env file in the root directory and configure:
 
