@@ -76,7 +76,7 @@ This is a backend application built for managing users, blog posts, and tags thr
 
 - Install dependencies = npm install
 
-- Create a .env file in the root directory and configure:
+- Create a .env file in the root directory and configure = npm install dotenv
 
 - DATABASE_URL = postgresql://<username>:<password>@localhost:5432/<your_database>
 
