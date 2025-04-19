@@ -72,7 +72,7 @@ This is a backend application built for managing users, blog posts, and tags thr
 
 - Clone the repository git clone https://github.com/Tanz2024/webby-backend-assessment.git
 
-- Navigate into the project directorycd webby-backend-assessment
+- Navigate into the project directory = cd webby-backend-assessment
 
 - Install dependencies = npm install
 
